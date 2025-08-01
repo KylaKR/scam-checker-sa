@@ -156,8 +156,8 @@ export default function ReportPage() {
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Report & Verify</h1>
-          <p className="text-gray-600">Help keep South Africa safe by reporting scammers or verifying legitimate businesses</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">South Africa Scam Check - Report & Verify</h1>
+          <p className="text-gray-600">Help keep South Africa safe by reporting scammers or verifying legitimate sellers. Is this number a scam SA? Report it here.</p>
         </div>
 
         {/* Tab Navigation */}
@@ -191,7 +191,7 @@ export default function ReportPage() {
         {/* Report Form */}
         {activeTab === "report" && (
           <div className="bg-white rounded-lg shadow-sm border p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-6">Report a Scam</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-6">Report a Scam - South Africa Scam Check</h2>
             
             <form onSubmit={reportForm.handleSubmit(onSubmitReport)} className="space-y-6">
               {/* Scammer Information */}
@@ -383,7 +383,7 @@ export default function ReportPage() {
         {/* Verify Form */}
         {activeTab === "verify" && (
           <div className="bg-white rounded-lg shadow-sm border p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-6">Verify a Business/Individual</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-6">Verify Seller South Africa</h2>
             
             <form onSubmit={verifyForm.handleSubmit(onSubmitVerify)} className="space-y-6">
               {/* Entity Information */}

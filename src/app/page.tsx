@@ -9,12 +9,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6">
-              <span className="text-blue-600">ScamChecker</span>
-              <span className="text-green-600">SA</span>
+              <span className="text-blue-600">South Africa Scam Check</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              South Africa&apos;s trusted platform for scam intelligence and business verification. 
-              Search, report, and stay safe online.
+              <strong>Verify seller South Africa</strong> - Is this number a scam SA? Instantly check phone numbers, 
+              emails, and sellers to protect yourself from fraud in South Africa.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link 
@@ -40,8 +39,8 @@ export default function Home() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How ScamCheckerSA Protects You</h2>
-            <p className="text-lg text-gray-600">Comprehensive tools to keep South Africans safe online</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">South Africa Scam Check - How We Protect You</h2>
+            <p className="text-lg text-gray-600">Verify seller South Africa and check if numbers are scams with our comprehensive tools</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -49,9 +48,9 @@ export default function Home() {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Search className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Smart Search</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">South Africa Scam Check</h3>
               <p className="text-gray-600">
-                Search our database of known scammers and verified businesses by phone, email, or name
+                Search our database to verify seller South Africa and check if numbers are scams by phone, email, or name
               </p>
             </div>
             
@@ -69,9 +68,9 @@ export default function Home() {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Verify Businesses</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Verify Seller South Africa</h3>
               <p className="text-gray-600">
-                Verify legitimate businesses and individuals to ensure safe transactions
+                Verify legitimate businesses and sellers in South Africa to ensure safe transactions
               </p>
             </div>
           </div>
@@ -106,8 +105,8 @@ export default function Home() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Common Scams in South Africa</h2>
-            <p className="text-lg text-gray-600">Stay informed about the latest scam tactics</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Is This Number a Scam SA? Common Scams in South Africa</h2>
+            <p className="text-lg text-gray-600">Stay informed about the latest scam tactics and learn to identify suspicious numbers</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -158,10 +157,10 @@ export default function Home() {
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Help Keep South Africa Safe
+            South Africa Scam Check - Help Keep South Africa Safe
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of South Africans who are already protecting their communities
+            Join thousands of South Africans who use our platform to verify seller South Africa and check if numbers are scams
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link 

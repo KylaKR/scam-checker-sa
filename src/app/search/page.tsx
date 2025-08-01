@@ -90,8 +90,8 @@ export default function SearchPage() {
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Search ScamCheckerSA</h1>
-          <p className="text-gray-600">Search for scammers or verify legitimate businesses</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">South Africa Scam Check - Search Database</h1>
+          <p className="text-gray-600">Verify seller South Africa or check if this number is a scam SA</p>
         </div>
 
         {/* Search Form */}
@@ -103,7 +103,7 @@ export default function SearchPage() {
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search by phone number, email, name, or business..."
+                placeholder="Enter phone number, email, or name to verify seller South Africa or check if scam..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 onKeyPress={(e) => e.key === "Enter" && handleSearch()}
               />
@@ -222,12 +222,12 @@ export default function SearchPage() {
         {/* Quick Search Tips */}
         {!hasSearched && (
           <div className="bg-blue-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-blue-900 mb-3">Search Tips</h3>
+            <h3 className="text-lg font-semibold text-blue-900 mb-3">South Africa Scam Check Tips</h3>
             <ul className="space-y-2 text-blue-800">
-              <li>• Search by phone number (e.g., +27 82 123 4567)</li>
-              <li>• Search by email address</li>
-              <li>• Search by business name or individual name</li>
-              <li>• Use partial matches for better results</li>
+              <li>• Search by phone number to check if this number is a scam SA (e.g., +27 82 123 4567)</li>
+              <li>• Search by email address to verify seller South Africa</li>
+              <li>• Search by business name or individual name for South Africa scam check</li>
+              <li>• Use partial matches for better results when verifying sellers</li>
             </ul>
           </div>
         )}
