@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://scamcheckersa.co.za/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1 

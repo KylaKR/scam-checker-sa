@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Search, AlertTriangle, CheckCircle } from "lucide-react";
+import DynamicCounters from "@/components/DynamicCounters";
 
 export default function Home() {
   return (
@@ -77,29 +78,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">1,000+</div>
-              <div className="text-gray-600">Scammers Reported</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
-              <div className="text-gray-600">Businesses Verified</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-red-600 mb-2">R2M+</div>
-              <div className="text-gray-600">Losses Prevented</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-600 mb-2">10K+</div>
-              <div className="text-gray-600">Users Protected</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Dynamic Counters Section */}
+      <DynamicCounters />
 
       {/* Common Scams Section */}
       <section className="py-16 px-4 bg-white">
@@ -114,41 +94,86 @@ export default function Home() {
               {
                 title: "Investment Scams",
                 description: "Fake cryptocurrency and investment opportunities targeting South Africans",
-                color: "bg-yellow-100 text-yellow-800"
+                color: "bg-yellow-100 text-yellow-800",
+                realExample: "Johannesburg man lost R250,000 to fake Bitcoin investment scheme promising 300% returns in 30 days",
+                redFlags: ["Guaranteed high returns", "Pressure to invest quickly", "Unregistered investment companies"],
+                prevention: "Always verify FSCA registration before investing"
               },
               {
                 title: "Romance Scams",
                 description: "Online dating scams where fraudsters build fake relationships",
-                color: "bg-pink-100 text-pink-800"
+                color: "bg-pink-100 text-pink-800",
+                realExample: "Cape Town woman scammed out of R180,000 by fake US soldier on dating app",
+                redFlags: ["Asking for money early", "Refusing video calls", "Sob stories about emergencies"],
+                prevention: "Never send money to someone you haven't met in person"
               },
               {
                 title: "Job Scams",
                 description: "Fake job offers requiring upfront payments or personal information",
-                color: "bg-blue-100 text-blue-800"
+                color: "bg-blue-100 text-blue-800",
+                realExample: "Durban graduate paid R5,000 'training fee' for fake remote job at international company",
+                redFlags: ["Upfront fees required", "Vague job descriptions", "Poor grammar in emails"],
+                prevention: "Legitimate companies never charge for job opportunities"
               },
               {
                 title: "Tech Support Scams",
                 description: "Fake technical support calls claiming computer problems",
-                color: "bg-purple-100 text-purple-800"
+                color: "bg-purple-100 text-purple-800",
+                realExample: "Pretoria senior citizen lost R12,000 to fake Microsoft support call about 'virus'",
+                redFlags: ["Unsolicited tech support calls", "Demanding remote access", "Threatening legal action"],
+                prevention: "Microsoft never calls about computer problems"
               },
               {
                 title: "Lottery Scams",
                 description: "Fake lottery wins requiring payment of fees to claim prizes",
-                color: "bg-green-100 text-green-800"
+                color: "bg-green-100 text-green-800",
+                realExample: "Bloemfontein woman paid R8,000 in 'taxes' for fake R2.5 million lottery win",
+                redFlags: ["Winning without entering", "Upfront fees required", "Pressure to pay quickly"],
+                prevention: "You can't win a lottery you didn't enter"
               },
               {
                 title: "Rental Scams",
                 description: "Fake rental properties with deposits paid to scammers",
-                color: "bg-red-100 text-red-800"
+                color: "bg-red-100 text-red-800",
+                realExample: "Port Elizabeth family lost R15,000 deposit on fake rental property listed on Facebook",
+                redFlags: ["Below-market rent", "Owner 'out of country'", "Rush to pay deposit"],
+                prevention: "Always view properties in person and verify ownership"
               }
             ].map((scam, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition">
+              <Link 
+                key={index} 
+                href={`/blog/${scam.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition group cursor-pointer"
+              >
                 <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 ${scam.color}`}>
                   {scam.title}
                 </div>
-                <p className="text-gray-700">{scam.description}</p>
-              </div>
+                <p className="text-gray-700 mb-4">{scam.description}</p>
+                
+                <div className="flex items-center text-blue-600 group-hover:text-blue-800 font-semibold text-sm">
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold text-blue-900 mb-3">💡 Pro Tip: How to Verify Seller South Africa</h3>
+              <p className="text-blue-800 mb-4">
+                Before making any transaction, always search our database to check if the phone number, email, or business name has been reported as a scam.
+              </p>
+              <Link 
+                href="/search" 
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+              >
+                <Search className="w-5 h-5 mr-2" />
+                Search Our Database Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>

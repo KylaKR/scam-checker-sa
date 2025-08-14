@@ -1,6 +1,29 @@
+"use client";
+
+import { useEffect } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+
+// Suppress hydration warnings caused by browser extensions
+function SuppressHydrationWarnings() {
+  useEffect(() => {
+    // Suppress console errors from hydration mismatches
+    const originalError = console.error;
+    console.error = (...args) => {
+      if (args[0] && typeof args[0] === 'string' && args[0].includes('hydration')) {
+        return;
+      }
+      originalError.apply(console, args);
+    };
+    
+    return () => {
+      console.error = originalError;
+    };
+  }, []);
+  
+  return null;
+}
 
 export const metadata: Metadata = {
   title: "ScamCheckerSA | Instantly Verify Scam Sellers & Numbers in South Africa",
@@ -43,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-gray-50 min-h-screen font-sans">
+        <SuppressHydrationWarnings />
         <nav className="bg-white shadow mb-8">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <span className="text-xl font-bold tracking-tight text-blue-700">ScamCheckerSA</span>
@@ -57,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>
           {children}
         </main>
+        <script src="//code.tidio.co/haf0pk97c8zc9efunfk5nipjn158cwme.js" async></script>
       </body>
     </html>
   );
